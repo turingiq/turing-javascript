@@ -6,19 +6,28 @@
     "Turing",
     "API"
   ],
-  "author": {
-    "name": "Turing Analytics",
-    "email": "mail@turingiq.com",
-    "url": "https://www.turingiq.com/"
-  },
+  "author": "Turing Analytics <mail@turingiq.com> (https://www.turingiq.com/)",
   "engines": {
     "node": ">= 4.x",
     "npm": ">= 2.x"
   },
   "dependencies": {
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "rest": "^2.0.0"
   },
   "devDependencies": {
-    "jest": "^23.4.2"
-  }
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "jest": "^23.5.0",
+    "jest-skipped-reporter": "^0.0.4",
+    "regenerator-runtime": "^0.12.1"
+  },
+  "jest": {
+    "globals": {
+      "__DEV__": true
+    }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:turingiq/turing-javascript.git",
+  "license": "MIT"
 }
