@@ -2,7 +2,7 @@ var VisualAPI = require('./lib/VisualAPI');
 
 describe('new', () => {
   it('will initialize new visual api instamce with api key and mode', () => {
-        var visual = new VisualAPI(process.env.NODE_ENV === "api_key", "sandbox");
+        var visual = new VisualAPI("api_key", "sandbox");
 		  	expect(visual.api_key).toBe("api_key");
 		  	expect(visual.mode).toBe('sandbox');
     })
@@ -48,7 +48,25 @@ describe('other actions', () => {
 
   it('crops an image automatically', () => {
   	function callback(response){
-    var response = visual.autocrop("https://storage.googleapis.com/turingiq/unit_test_images/backpack-1.jpg",'');
+    var response = visual.autocrop("https://storage.googleapis.com/turingiq/unit_test_images/backpack-1.jpg");
+    expect(response).toBeTruthy();
+    done(); 
+  }
+
+  });
+
+  it('searches images based on given url', () => {
+    function callback(response){
+    var response = visual.search("https://images-na.ssl-images-amazon.com/images/I/71AfbkjR6AL._SX522_.jpg");
+    expect(response).toBeTruthy();
+    done(); 
+  }
+
+  });
+
+  it('searches images based on given url', () => {
+    function callback(response){
+    var response = visual.recommendation(400000, ['men']);
     expect(response).toBeTruthy();
     done(); 
   }
