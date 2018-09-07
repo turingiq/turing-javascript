@@ -18,8 +18,8 @@ Initialize
 ```javascript
 // You can initialize the `VisualAPI` class with below parameters.
 
-api_key = 'your_api_key' # You can get API key when you login at: https://www.turingiq.com/login
-mode = 'live'            # the mode can be either `live` or `sandbox`. Default mode is `live`.
+api_key = 'your_api_key' // You can get API key when you login at: https://www.turingiq.com/login
+mode = 'live'            // the mode can be either `live` or `sandbox`. Default mode is `live`.
 visual = new VisualAPI(api_key, "sandbox");
 ```
 
@@ -38,7 +38,7 @@ Detect objects in image and get bounding boxes around objects detected.
 // image_url is required field.
 image_url = "https://example.com/image_url.jpg"
 
-# now let's call the API.
+// now let's call the API.
 resp = visual.autocrop(image_url)
 ```
 
