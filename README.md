@@ -4,8 +4,13 @@ Turing visual search and visually similar recommendations API library for Javasc
 
 ## Installation
 
-nstall Jest using ``yarn`` :
+Install Jest using ``yarn`` :
 
+```
+yarn add --dev jest
+```
+
+Or via ```npm``` :
 ```
 npm install --save-dev jest
 ```
