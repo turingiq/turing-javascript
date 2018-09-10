@@ -1,5 +1,6 @@
 var VisualAPI = require('./../lib/VisualAPI');
 
+
 test('autocrop() function test', () => {
   
     let visual;
